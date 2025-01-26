@@ -21,8 +21,8 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build Docker image
-      run: |
-        docker build -t ghcr.io/${{ github.repository }}/backstage:latest -f ./backstage/packages/backend/Dockerfile ./backstage/packages/backend
+        run: |
+          docker build -t ghcr.io/${{ github.repository }}/backstage:latest -f ./backstage/packages/backend/Dockerfile ./backstage/packages/backend
 
       - name: Push Docker image
         run: |
