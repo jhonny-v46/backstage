@@ -38,7 +38,8 @@ USER node
 WORKDIR /app
 
 # Copy files needed by Yarn
-COPY --chown=node:node .yarn ./.yarn
+RUN ls
+COPY --chown=node:node backstage/.yarn ./.yarn
 COPY --chown=node:node .yarnrc.yml ./
 COPY --chown=node:node backstage.json ./
 
